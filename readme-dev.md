@@ -116,7 +116,7 @@ always fetch changes from the remote subversion repository.  Run the following
 to fetch changes and apply them as commits to your 2.x branch
 
     git svn fetch
-    git merge git-svn
+    git merge -Xtheirs git-svn
 
 Note: If the above merge removes the authors.txt file (look at the output of
 the merge command), do the following:
