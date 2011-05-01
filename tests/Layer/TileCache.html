@@ -159,7 +159,7 @@
         layer.serverResolutions = [14,13,12,11,10];
         tileurl = layer.getURL(new OpenLayers.Bounds(0,0,0,0));
         level = parseInt(tileurl.split('/')[2]);
-        var gotLevel = OpenLayers.Util.indexOf(layer.serverResolutions, map.getResolution());
+        var gotLevel = OpenLayers.Array.indexOf(layer.serverResolutions, map.getResolution());
         t.eq(gotLevel, level, "Tile zoom level is correct with serverResolutions");
         
         map.destroy();

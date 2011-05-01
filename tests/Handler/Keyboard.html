@@ -58,7 +58,7 @@
         OpenLayers.Event.observe = function(obj, type, method) {
             t.ok(obj == document,
                  "activate calls observing with correct object");
-            var validType = (OpenLayers.Util.indexOf(types, type) != -1);
+            var validType = (OpenLayers.Array.indexOf(types, type) != -1);
             t.ok(validType, "activate calls observe for " + type);
             t.ok(method == handler.eventListener,
                  "activate calls observing with correct method");
@@ -86,7 +86,7 @@
         OpenLayers.Event.stopObserving = function(obj, type, method) {
             t.ok(obj == document,
                  "deactivate calls stopObserving with correct object");
-            var validType = (OpenLayers.Util.indexOf(types, type) != -1);
+            var validType = (OpenLayers.Array.indexOf(types, type) != -1);
             t.ok(validType, "deactivate calls stopObserving for " + type);
             t.ok(method == handler.eventListener,
                  "deactivate calls stopObserving with correct method");

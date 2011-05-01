@@ -27,12 +27,12 @@
         for (var i = 0; i < browserTypes.length; i++) {
             var type = browserTypes[i];
             t.ok( events.listeners[type] instanceof Array, "browser event: " + type + " correctly registered" );
-            t.ok( OpenLayers.Util.indexOf(events.eventTypes, type) != -1, "browser type " + type + "' correctly added to eventTypes array");
+            t.ok( OpenLayers.Array.indexOf(events.eventTypes, type) != -1, "browser type " + type + "' correctly added to eventTypes array");
         }
         for (var i = 0; i < eventTypes.length; i++) {
             var type = eventTypes[i];
             t.ok( events.listeners[type] instanceof Array, "custom event: " + type + " correctly registered");
-            t.ok( OpenLayers.Util.indexOf(events.eventTypes, type) != -1, "eventType " + type + "' correctly added to eventTypes array");
+            t.ok( OpenLayers.Array.indexOf(events.eventTypes, type) != -1, "eventType " + type + "' correctly added to eventTypes array");
         }
 
         // default/nulls
@@ -426,11 +426,11 @@
 
         var newEventType = "onFoo";
         t.ok( events.listeners[newEventType] == null, "event type not yet registered has null entry in listeners array");
-        t.ok( OpenLayers.Util.indexOf(events.eventTypes, newEventType) == -1, "event type not yet registered not in eventTypes array");
+        t.ok( OpenLayers.Array.indexOf(events.eventTypes, newEventType) == -1, "event type not yet registered not in eventTypes array");
 
         events.addEventType(newEventType);
         t.eq( events.listeners[newEventType].length, 0, "event type passed to addEventType correctly set up" );
-        t.ok( OpenLayers.Util.indexOf(events.eventTypes, newEventType) != -1, "event type passed to addEventType in eventTypes array");
+        t.ok( OpenLayers.Array.indexOf(events.eventTypes, newEventType) != -1, "event type passed to addEventType in eventTypes array");
         
         var func = function () {};
         events.register( "doThingA", obj, func );

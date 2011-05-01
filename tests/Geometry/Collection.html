@@ -183,15 +183,15 @@
         
         t.ok(coll.addComponent(point1),
              "addComponent returns true for 1st geometry type in componentTypes");
-        t.ok(OpenLayers.Util.indexOf(coll.components, point1) > -1,
+        t.ok(OpenLayers.Array.indexOf(coll.components, point1) > -1,
              "addComponent adds 1st restricted type to components array");
         t.ok(coll.addComponent(line),
              "addComponent returns true for 2nd geometry type in componentTypes");
-        t.ok(OpenLayers.Util.indexOf(coll.components, point1) > -1,
+        t.ok(OpenLayers.Array.indexOf(coll.components, point1) > -1,
              "addComponent adds 2nd restricted type to components array");
         t.ok(!coll.addComponent(multipoint),
              "addComponent returns false for geometry type not in componentTypes");
-        t.ok(OpenLayers.Util.indexOf(coll.components, multipoint) == -1,
+        t.ok(OpenLayers.Array.indexOf(coll.components, multipoint) == -1,
              "addComponent doesn't add restricted type to component array");
 
     }

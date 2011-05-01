@@ -46,9 +46,9 @@
     function test_Util_IndexOf(t) {
         t.plan( 3 );
         var array = new Array(1, "bar");
-        t.eq(OpenLayers.Util.indexOf(array, 1), 0);
-        t.eq(OpenLayers.Util.indexOf(array, "bar"), 1);
-        t.eq(OpenLayers.Util.indexOf(array, "foo"), -1);
+        t.eq(OpenLayers.Array.indexOf(array, 1), 0);
+        t.eq(OpenLayers.Array.indexOf(array, "bar"), 1);
+        t.eq(OpenLayers.Array.indexOf(array, "foo"), -1);
     }
 
     function test_Util_Array(t) {
@@ -56,9 +56,9 @@
 
         var array = new Array(1,2,3,4,4,5);
 
-        OpenLayers.Util.removeItem(array, 3);
+        OpenLayers.Array.removeItem(array, 3);
         t.eq( array.toString(), "1,2,4,4,5", "Util.removeItem works on one element");    
-        OpenLayers.Util.removeItem(array, 4);
+        OpenLayers.Array.removeItem(array, 4);
         t.eq( array.toString(), "1,2,5", "Util.removeItem works on more than one element ");    
     }
     

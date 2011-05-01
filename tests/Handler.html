@@ -42,7 +42,7 @@
             var r = func();
             if(typeof r == "string") {
                 // this is one of the mock handler methods
-                t.ok(OpenLayers.Util.indexOf(events, type) > -1,
+                t.ok(OpenLayers.Array.indexOf(events, type) > -1,
                      "activate calls registerPriority with browser event: " + type);
                 t.eq(typeof func, "function",
                      "activate calls registerPriority with a function");
@@ -93,7 +93,7 @@
             var r = func();
             if(typeof r == "string") {
                 // this is one of the mock handler methods
-                t.ok(OpenLayers.Util.indexOf(events, type) > -1,
+                t.ok(OpenLayers.Array.indexOf(events, type) > -1,
                      "deactivate calls unregister with browser event: " + type);
                 t.eq(typeof func, "function",
                      "activate calls unregister with a function");

@@ -31,7 +31,7 @@
         t.eq( layer.ratio, 1.5, "ratio default is 1.5");
         t.eq( layer.numLoadingTiles, 0, "numLoadingTiles starts at 0");
         t.ok( layer.events.listeners["tileloaded"] != null, "'tileloaded' event added to layer's event types");
-        t.ok( OpenLayers.Util.indexOf(layer.events.eventTypes, 'tileloaded') != -1 ,"'tileloaded' event added to layer's event types");
+        t.ok( OpenLayers.Array.indexOf(layer.events.eventTypes, 'tileloaded') != -1 ,"'tileloaded' event added to layer's event types");
 
         //regression testing for #1502
         t.ok( layer.events.listeners['tileloaded'].length == 0, "no listeners for tileloaded preregister");        

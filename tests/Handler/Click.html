@@ -53,10 +53,10 @@
             var r = func();
             if(typeof r == "string") {
                 // this is one of the mock handler methods
-                t.eq(OpenLayers.Util.indexOf(nonevents, type), -1,
+                t.eq(OpenLayers.Array.indexOf(nonevents, type), -1,
                      "registered method is not one of the events " +
                      "that should not be handled");
-                t.ok(OpenLayers.Util.indexOf(events, type) > -1,
+                t.ok(OpenLayers.Array.indexOf(events, type) > -1,
                      "activate calls registerPriority with browser event: " + type);
                 t.eq(typeof func, "function",
                      "activate calls registerPriority with a function");

@@ -23,7 +23,7 @@
                 "new OpenLayers.Map creates map" );
         map.addControl(control);
         t.ok( control.map === map, "Control.map is set to the map object" );
-        t.ok( OpenLayers.Util.indexOf(map.controls, control), "map.controls contains control" );
+        t.ok( OpenLayers.Array.indexOf(map.controls, control), "map.controls contains control" );
     }
 
     /* When interpretting

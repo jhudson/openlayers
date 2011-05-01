@@ -143,9 +143,9 @@
         t.plan(1);
         var map = new OpenLayers.Map( 'map' , 
         { controls: [] , 'numZoomLevels':20});
-    
+
         var satellite = new OpenLayers.Layer.Google( "Google Satellite" , {type: google.maps.MapTypeId.SATELLITE, 'maxZoomLevel':18} );
-        var layer = new OpenLayers.Layer.WMS.Untiled( "OpenLayers WMS", 
+        var layer = new OpenLayers.Layer.WMS( "OpenLayers WMS", 
                 "http://labs.metacarta.com/wms/vmap0", {layers: 'basic', 'transparent':true}, 
                   {isBaseLayer: false} );
     
@@ -155,7 +155,7 @@
         var size = map.getSize();
         var px = new OpenLayers.Pixel(size.w, size.h);
         var br = map.getLonLatFromPixel(px);
-        t.ok(layer.grid[0][0].bounds.containsLonLat(br), "Bottom right pixel is covered by untiled WMS layer");
+        t.ok(layer.grid[0][0].bounds.containsLonLat(br), "Bottom right pixel is covered by WMS layer");
     }    
     function test_Layer_Google_isBaseLayer (t) {
         t.plan(3);

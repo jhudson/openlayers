@@ -8,7 +8,7 @@
         var control = new OpenLayers.Control.DrawFeature("foo", function() {});
         t.ok(control instanceof OpenLayers.Control.DrawFeature,
              "constructor returns an instance");
-        t.ok(OpenLayers.Util.indexOf(control.EVENT_TYPES, "featureadded") > -1,
+        t.ok(OpenLayers.Array.indexOf(control.EVENT_TYPES, "featureadded") > -1,
              "featureadded event in EVENT_TYPES");
     }
     

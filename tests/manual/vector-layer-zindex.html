@@ -77,7 +77,7 @@
         }
 
         function removeLayerA() {
-            if (OpenLayers.Util.indexOf(map.layers, layerA) > -1) {
+            if (OpenLayers.Array.indexOf(map.layers, layerA) > -1) {
                 map.removeLayer(layerA);
             }
         }
